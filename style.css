@@ -184,11 +184,13 @@ body {
 
 .btn {
     width: 100%;
+    left: 50%;
     text-align: center;
 }
 
 .btn_fuel {
     opacity: 0.6;
+    left: 50%;
     padding: 15px 60px;
     border-radius: 15px/15px;
     background: #707070;
