@@ -1,0 +1,250 @@
+body {
+    font-family: 'Lato', sans-serif;
+    height: 100vh;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* burger menu  */
+
+.burger {
+    position: inline-block;
+    cursor: pointer;
+    margin: -40px 0px 0 0px;
+    visibility: hidden;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #505050;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.menu_burger {
+    background-color: #505050;
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    visibility: visible;
+}
+
+
+.apps_icons_active {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    margin-right: 0;
+    padding: 0;
+    width: 40vh;
+    height: auto;
+}
+
+.menu_burger_active {
+    position: relative;
+    background-color: #505050;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    z-index: 1;
+}
+
+/* main seciton  */
+.main_section {
+    background-image:
+        radial-gradient(#383838,
+            #232323);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.apps_icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+    margin-right: 0;
+    padding: 0;
+    height: 95vh;
+    visibility: visible;
+}
+
+
+
+.button {
+    opacity: 0.6;
+    text-align: center;
+    padding: 25px;
+    background: none;
+    border: none;
+    color: white;
+    margin: 10px 0;
+}
+
+.button:hover {
+    background-color: #232323;
+    color: white;
+}
+
+.button:focus {
+    border: none;
+    outline: none;
+}
+
+
+
+@media only screen and (max-width: 700px) {
+    .menu_burger {
+        visibility: hidden;
+    }
+
+    .button {
+        padding: 15px;
+        margin: 10px 0;
+    }
+
+    .burger {
+        display: inline-block;
+        cursor: pointer;
+        visibility: visible;
+        margin-top: 25px;
+        margin: 20px 0 20px 40px;
+    }
+
+    .apps_icons {
+        visibility: hidden;
+    }
+
+}
+
+/* fuel section */
+
+.app_container {
+    width: 500px;
+    height: 500px;
+    border-radius: 10%/10%;
+    background-color: #505050;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-35%, -60%)
+}
+
+.fuel_info {
+    width: 500px;
+    height: 200px;
+    border-radius: 10%/10%;
+    background-color: #707070;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-35%, 40%)
+}
+
+.fuel_tittle {
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    margin: 35px 0;
+}
+
+.fuel_form {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 80px;
+}
+
+.fuel_form>input {
+    margin: 8px;
+    padding: 15px;
+    border-radius: 15px/15px;
+    border: none;
+}
+
+.btn {
+    width: 100%;
+    align-items: center;
+}
+
+.btn_fuel {
+    opacity: 0.6;
+    text-align: center;
+    padding: 15px 60px;
+    border-radius: 15px/15px;
+    background: #707070;
+    border: none;
+    color: white;
+    margin: 10px 0;
+}
+
+.btn_fuel:hover {
+    background-color: #232323;
+    color: white;
+}
+
+.btn_fuel:focus {
+    border: none;
+    outline: none;
+}
+
+.score>p {
+    margin: 130px 30px 0 30px;
+    font-size: 14px;
+    text-align: center;
+    color: white;
+}
+
+
+@media only screen and (max-width: 700px) {
+    .app_container {
+        width: 80%;
+        height: 55%;
+        transform: translate(-50%, -60%)
+    }
+
+    .fuel_info {
+        width: 80%;
+        height: 35%;
+        margin-right: -50%;
+        transform: translate(-50%, 5%)
+    }
+
+    .fuel_tittle {
+        font-size: 15px;
+        margin: 20px 0;
+    }
+
+    .fuel_form {
+        display: flex;
+        flex-direction: column;
+        margin: 0px 20px;
+    }
+
+    .score>p {
+        margin: 200px 30px 0 30px;
+        font-size: 14px;
+        text-align: center;
+    }
+
+}
