@@ -35,13 +35,14 @@
             <div class="app_container">
                  <h1 class="fuel_tittle">Obliczanie kosztów przejazdu</h1>
                  <form action="*" class="fuel_form">
-                    <input type="number" class="dystans" size="20" maxlength="10" placeholder="Dystans"/>
-                    <input type="number" class="spalanie" size="20" maxlength="4" placeholder="Spalanie"/>
-                    <input type="number" class="CenaPaliwa" size="20" maxlength="5" placeholder="Cena paliwka"/>
-                    <input type="number" class="IloscOsob" size="20" maxlength="2" placeholder="Ilość osób"/>
+                    <input type="number" class="dystans check_value" size="20" maxlength="10" placeholder="Dystans"/>
+                    <input type="number" class="spalanie check_value" size="20" maxlength="4" placeholder="Spalanie"/>
+                    <input type="number" class="CenaPaliwa check_value" size="20" maxlength="5" placeholder="Cena paliwka"/>
+                    <input type="number" class="IloscOsob check_value" size="20" maxlength="2" placeholder="Ilość osób"/>
                     </form>
                     <div class="btn">
                         <button type="button" class="btn_fuel" id="fuelBtn">Policz</button>
+                        <span class="error_msg"></span>
                     </div>
             </div>
         </div>
