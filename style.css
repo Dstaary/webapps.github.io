@@ -216,6 +216,12 @@ body {
     color: white;
 }
 
+.error_msg>p {
+    color: rgb(248, 82, 82);
+    margin: 0;
+    font-size: 14px;
+}
+
 
 @media only screen and (max-width: 700px) {
     .app_container {
