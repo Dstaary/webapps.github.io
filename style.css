@@ -140,7 +140,7 @@ body {
 
 .app_container {
     width: 500px;
-    height: 500px;
+    height: 450px;
     border-radius: 10%/10%;
     background-color: #505050;
     position: absolute;
@@ -184,19 +184,17 @@ body {
 
 .btn {
     width: 100%;
-    left: 50%;
     text-align: center;
 }
 
 .btn_fuel {
     opacity: 0.6;
-    left: 50%;
     padding: 15px 60px;
     border-radius: 15px/15px;
     background: #707070;
     border: none;
     color: white;
-    margin: 10px 0;
+    margin: 0;
 }
 
 .btn_fuel:hover {
@@ -210,7 +208,7 @@ body {
 }
 
 .score>p {
-    margin: 130px 30px 0 30px;
+    margin: 115px 30px 0 30px;
     font-size: 14px;
     text-align: center;
     color: white;
@@ -220,19 +218,20 @@ body {
     color: rgb(248, 82, 82);
     margin: 0;
     font-size: 14px;
+
 }
 
 
 @media only screen and (max-width: 700px) {
     .app_container {
         width: 80%;
-        height: 55%;
+        height: 380px;
         transform: translate(-50%, -60%)
     }
 
     .fuel_info {
         width: 80%;
-        height: 35%;
+        height: 250px;
         margin-right: -50%;
         transform: translate(-50%, 5%)
     }
@@ -249,7 +248,7 @@ body {
     }
 
     .score>p {
-        margin: 200px 30px 0 30px;
+        margin: 160px 30px 0 30px;
         font-size: 14px;
         text-align: center;
     }
