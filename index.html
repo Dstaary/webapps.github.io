@@ -8,6 +8,9 @@
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+        
+        
+
     <title>Document</title>
 </head>
 <body>
@@ -20,11 +23,11 @@
         <nav class="menu_burger" id="menu">
             
             <div class="apps_icons" id="apps" >
-                <button class="button">Koszt paliwa</button>
-                <button class="button">To Do App</button>
-                <button class="button">Losowanie</button>
-                <button class="button">Notatki</button>
-                <button class="button">Kalkulator</button>
+                <a href="index.html"  class="button">Koszt paliwa</a>
+                <a href="index.html"  class="button">To Do App</a>
+                <a href="index.html"  class="button">Losowanie</a>
+                <a href="index.html"  class="button">Notatki</a>
+                <a href="index.html"  class="button">Kalkulator</a>
             </div>
             
         </nav>
@@ -35,16 +38,21 @@
             </div>
             <div class="app_container">
                  <h1 class="fuel_tittle">Obliczanie kosztów przejazdu</h1>
-                 <form action="*" class="fuel_form">
-                    <input type="number" class="dystans check_value" size="20" maxlength="10" placeholder="Dystans"/>
-                    <input type="number" class="spalanie check_value" size="20" maxlength="4" placeholder="Spalanie"/>
-                    <input type="number" class="CenaPaliwa check_value" size="20" maxlength="5" placeholder="Cena paliwka"/>
-                    <input type="number" class="IloscOsob check_value" size="20" maxlength="2" placeholder="Ilość osób"/>
+                 <form class="fuel_form">
+                    
+                    <input type="number" class="dystans check_value" size="20" maxlength="10" name="dystans"/>
+                    <label for="dystans">Dystans</label>
+                    
+                    <input type="number" class="spalanie check_value" size="20" maxlength="4" name="spalanie">
+                    <label for="spalanie">Spalanie</label>
+
+                    <input type="number" class="CenaPaliwa check_value" size="20" maxlength="5" name="cena_paliwka"/>
+                    <label for="cena_paliwka">Cena paliwka</label>
+
+                    <input type="number" class="IloscOsob check_value" size="20" maxlength="2" name="ilosc_osob"/>
+                    <label for="ilosc_osob">Ilość osób</label>
+
                     </form>
-                    <div class="btn">
-                        <button type="button" class="btn_fuel" id="fuelBtn">Policz</button>
-                        <span class="error_msg"></span>
-                    </div>
             </div>
         </div>
 
@@ -56,7 +64,7 @@
           e.classList.toggle("change");
         }
     </script>
-    <script src="toggle_menu.js"></script>
-    <script src="fuel_score.js"></script>
+    <script src="js/toggle_menu.js"></script>
+    <script src="js/fuel_score.js"></script>
 </body>
 </html>
