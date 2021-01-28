@@ -88,7 +88,9 @@ body {
     visibility: visible;
 }
 
-
+a {
+    text-decoration: none;
+}
 
 .button {
     opacity: 0.6;
@@ -169,10 +171,17 @@ body {
     margin: 35px 0;
 }
 
+/* form  */
+
 .fuel_form {
     display: flex;
     flex-direction: column;
     margin: 15px 80px;
+}
+
+.fuel_form>div {
+    position: relative;
+    overflow: hidden;
 }
 
 .fuel_form>input {
@@ -180,6 +189,12 @@ body {
     padding: 15px;
     border-radius: 15px/15px;
     border: none;
+}
+
+.fuel_form>label {
+    margin: -10px 0 10px 10px;
+    font-size: 14px;
+    color: grey;
 }
 
 .btn {
