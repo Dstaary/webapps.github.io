@@ -88,10 +88,6 @@ body {
     visibility: visible;
 }
 
-a {
-    text-decoration: none;
-}
-
 .button {
     opacity: 0.6;
     text-align: center;
@@ -100,6 +96,8 @@ a {
     border: none;
     color: white;
     margin: 10px 0;
+    
+    text-decoration: none;
 }
 
 .button:hover {
