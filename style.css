@@ -239,11 +239,11 @@ body {
     color: white;
 }
 
-.error_msg>p {
+.error {
+    width: 100%;
     color: rgb(248, 82, 82);
-    margin: 0;
     font-size: 14px;
-
+    text-align: center;
 }
 
 
