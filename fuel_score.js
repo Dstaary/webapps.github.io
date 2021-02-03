@@ -9,13 +9,17 @@ const newSpan = document.querySelector(".score");
 
 form.addEventListener('input', () => {
 
-for (const formLabel of formLabels) {
-    if (!formLabel.value){
-        return;
-    } else {
-        newSpan.innerHTML = "";       
-    }
-}
+        for (const formLabel of formLabels) {
+            if (!formLabel.value){
+                return;
+            } else {
+                if (formLabel.value < 0 || formLabel.value === "e") {
+                    newSpan.innerHTML = `<span class="error">Niepoprawne dane lub puste pola !</span>`;
+                    return;
+                }
+                newSpan.innerHTML = "";       
+            }
+        }
 
 const fuelL = (dystans.value * spalanie.value) / 100;
 
