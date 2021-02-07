@@ -80,8 +80,26 @@
                 </div>
         </div>
 
-        <!-- <div class="app draw_section hidden_section" id="draw">
-            
+        <div class="app draw_section " id="draw">
+            <div class="draw_number">
+                <span class="number">
+                    <!-- <p>Wylosowana liczba to: <b class="green">213</b></p> -->
+                </span>
+            </div>
+            <div class="draw_container">
+                <h1 class="fuel_tittle">Losowanie</h1>
+                <form class="draw_form">
+                    <div class="form-floating mb-3">
+                    <input type="number" class="form-control startnumber drawcheck" id="floatingInput"  required placeholder="Od" size="4" maxlength="4"  name="startnumber">
+                    <label for="floatingInput">Od</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                    <input type="number" class="form-control lastnumber drawcheck" id="floatingInput" placeholder="Do" required
+                    size="4" maxlength="4" name="lastnumber">
+                    <label for="floatingInput">Do</label>
+                    </div>
+                </form>
+            </div>
         </div>
 
         <div class="app notes_section hidden_section" id="notes">
@@ -103,5 +121,6 @@
     <script src="menu_links.js"></script>
     <script src="toggle_menu.js"></script>
     <script src="fuel_score.js"></script>
+    <script src="drawnumber.js"></script>
 </body>
 </html>
