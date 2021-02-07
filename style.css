@@ -378,3 +378,80 @@ body {
         margin-top: 150px;
     }
 }
+
+/*          draw section              */
+
+.draw_container {
+    width: 500px;
+    height: 300px;
+    border-radius: 10%/10%;
+    background-color: #505050;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-30%, -50%)
+}
+
+.draw_number {
+    width: 500px;
+    height: auto;
+    border-radius: 10%/10%;
+    background-color: #707070;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-30%, 50%)
+}
+
+.number>p {
+    margin: 100px 30px 20px 30px;
+    font-size: 24px;
+    text-align: center;
+    color: white;
+}
+
+.draw_form {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 80px;
+}
+
+.draw_form>div {
+    position: relative;
+    overflow: hidden;
+}
+
+.draw_form>input {
+    margin: 8px;
+    padding: 15px;
+    border-radius: 15px/15px;
+    border: none;
+}
+
+.draw_form>label {
+    margin: -10px 0 10px 10px;
+    font-size: 14px;
+    color: grey;
+}
+
+@media only screen and (max-width: 700px) {
+    .draw_container {
+        /* margin-top: 150px; */
+        width: 80%;
+        height: auto;
+        transform: translate(-50%, -50%)
+    }
+
+    .draw_number {
+        width: 80%;
+        transform: translate(-50%, 10%)
+    }
+
+    .draw_form {
+        display: flex;
+        flex-direction: column;
+        margin: 0px 20px;
+    }
+}
