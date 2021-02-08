@@ -1,0 +1,478 @@
+body {
+    font-family: 'Lato', sans-serif;
+    height: 100vh;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.hidden_section {
+    visibility: hidden;
+}
+
+
+
+/* burger menu  */
+
+.burger {
+    position: inline-block;
+    cursor: pointer;
+    margin: -40px 0px 0 0px;
+    visibility: hidden;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #505050;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.menu_burger {
+    background-color: #505050;
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    visibility: visible;
+}
+
+
+.apps_icons_active {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    margin-right: 0;
+    padding: 0;
+    width: 40vh;
+    height: auto;
+}
+
+.menu_burger_active {
+    position: relative;
+    background-color: #505050;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    z-index: 1;
+}
+
+/* main seciton  */
+.main_section {
+    background-image:
+        radial-gradient(#383838,
+            #232323);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.apps_icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+    margin-right: 0;
+    padding: 0;
+    height: 95vh;
+    visibility: visible;
+}
+
+
+.nav_button {
+    opacity: 0.6;
+    text-align: center;
+    padding: 25px;
+    background: none;
+    border: none;
+    color: white;
+    margin: 10px 0;
+
+    text-decoration: none;
+}
+
+.nav_button:hover {
+    background-color: #232323;
+    color: white;
+}
+
+.nav_button:focus {
+    border: none;
+    outline: none;
+}
+
+
+
+@media only screen and (max-width: 700px) {
+    .menu_burger {
+        visibility: hidden;
+    }
+
+    .nav_button {
+        padding: 15px;
+        margin: 10px 0;
+    }
+
+    .burger {
+        display: inline-block;
+        cursor: pointer;
+        visibility: visible;
+        margin-top: 25px;
+        margin: 20px 0 20px 40px;
+    }
+
+    .apps_icons {
+        visibility: hidden;
+    }
+
+    .main_section {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* fuel section */
+
+.fuel_container {
+    width: 500px;
+    height: 450px;
+    border-radius: 10%/10%;
+    background-color: #505050;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-35%, -60%)
+}
+
+.fuel_info {
+    width: 500px;
+    height: auto;
+    border-radius: 10%/10%;
+    background-color: #707070;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-35%, 40%)
+}
+
+.fuel_tittle {
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    margin: 35px 0;
+}
+
+/* form  */
+
+.fuel_form {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 80px;
+}
+
+.fuel_form>div {
+    position: relative;
+    overflow: hidden;
+}
+
+.fuel_form>input {
+    margin: 8px;
+    padding: 15px;
+    border-radius: 15px/15px;
+    border: none;
+}
+
+.fuel_form>label {
+    margin: -10px 0 10px 10px;
+    font-size: 14px;
+    color: grey;
+}
+
+.btn {
+    width: 100%;
+    text-align: center;
+}
+
+.btn_fuel {
+    opacity: 0.6;
+    padding: 15px 60px;
+    border-radius: 15px/15px;
+    background: #707070;
+    border: none;
+    color: white;
+    margin: 0;
+}
+
+.btn_fuel:hover {
+    background-color: #232323;
+    color: white;
+}
+
+.btn_fuel:focus {
+    border: none;
+    outline: none;
+}
+
+.score>p {
+    margin: 115px 30px 20px 30px;
+    font-size: 14px;
+    text-align: center;
+    color: white;
+}
+
+.error {
+    width: 100%;
+    color: rgb(248, 82, 82);
+    font-size: 14px;
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 700px) {
+    .fuel_container {
+        width: 80%;
+        height: 380px;
+        transform: translate(-50%, -60%)
+    }
+
+    .fuel_info {
+        width: 80%;
+        margin-right: -50%;
+        transform: translate(-50%, 5%)
+    }
+
+    .fuel_tittle {
+        font-size: 15px;
+        margin: 20px 0;
+    }
+
+    .fuel_form {
+        display: flex;
+        flex-direction: column;
+        margin: 0px 20px;
+    }
+
+    .score>p {
+        margin: 160px 30px 20px 30px;
+        font-size: 14px;
+        text-align: center;
+    }
+
+}
+
+/*    toDoApp section     */
+
+.toDo_container {
+    width: 500px;
+    height: auto;
+    border-radius: 10%/10%;
+    background-color: #505050;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-30%, -50%)
+}
+
+.task_input {
+    display: flex;
+    flex-direction: row;
+    margin: 15px 50px;
+}
+
+.addTask_btn {
+    background-color: #232323;
+    color: white;
+    border-radius: 4px;
+    border: none;
+}
+
+.addTask_btn:hover {
+    background-color: #383838;
+    color: white;
+    border: none;
+}
+
+.addTask_btn:focus {
+    border: none;
+    outline: none;
+}
+
+
+/*      task        */
+
+.task {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 40px;
+    margin: 15px 40px;
+}
+
+.task_name {
+    margin: 5px 20px;
+}
+
+.checkTask_btn {
+    height: 40px;
+    width: 40px;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.checkTask_btn:focus {
+    outline: none;
+}
+
+.deleteTask_btn {
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: rgb(116, 3, 3);
+}
+
+.deleteTask_btn:focus {
+    outline: none;
+}
+
+.green {
+    background-color: green;
+}
+
+@media only screen and (max-width: 700px) {
+    .toDo_container {
+        /* margin-top: 150px; */
+        width: 80%;
+        height: auto;
+        transform: translate(-50%, -60%)
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .toDo_container {
+        margin-top: 150px;
+    }
+}
+
+/*          draw section              */
+
+.draw_container {
+    width: 500px;
+    height: auto;
+    border-radius: 10%/10%;
+    background-color: #505050;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-30%, -50%)
+}
+
+.draw_number {
+    width: 500px;
+    height: auto;
+    border-radius: 10%/10%;
+    background-color: #707070;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-30%, 70%)
+}
+
+.number>p {
+    margin: 100px 30px 20px 30px;
+    font-size: 24px;
+    text-align: center;
+    color: white;
+}
+
+.draw_form {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 80px;
+}
+
+.draw_form>div {
+    position: relative;
+    overflow: hidden;
+}
+
+.draw_form>input {
+    margin: 8px;
+    padding: 15px;
+    border-radius: 15px/15px;
+    border: none;
+}
+
+.draw_form>label {
+    margin: -10px 0 10px 10px;
+    font-size: 14px;
+    color: grey;
+}
+
+.drawNumber_btn {
+    background-color: #232323;
+    color: white;
+    border-radius: 4px;
+    border: none;
+    margin: 30px;
+    padding: 10px;
+
+}
+
+.drawNumber:hover {
+    background-color: #383838;
+    color: white;
+    border: none;
+}
+
+.drawNumber:focus {
+    border: none;
+    outline: none;
+}
+
+@media only screen and (max-width: 700px) {
+    .draw_container {
+        /* margin-top: 150px; */
+        width: 80%;
+        height: auto;
+        transform: translate(-50%, -50%)
+    }
+
+    .draw_number {
+        width: 80%;
+        transform: translate(-50%, 50%)
+    }
+
+    .draw_form {
+        display: flex;
+        flex-direction: column;
+        margin: 0px 20px;
+    }
+}
