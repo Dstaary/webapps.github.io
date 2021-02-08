@@ -4,7 +4,8 @@ const scoreNumber = document.querySelector("span.number");
 const formDraw = document.querySelector(".draw_form");
 const drawChecks = document.querySelectorAll("input.drawcheck");
 
-function drawNumberFn() {
+const drawclick = (e) => {
+    e.preventDefault();
     for (const drawCheck of drawChecks) {
         if (drawCheck.value < 0 || drawCheck.value === "e" || drawCheck.value === "") {
             scoreNumber.innerHTML = `<p>Niepoprawne dane lub puste pola !</p>`;
@@ -18,3 +19,5 @@ function drawNumberFn() {
         }
     }
 }
+
+document.querySelector("button.drawNumber_btn").addEventListener("click", drawclick);
