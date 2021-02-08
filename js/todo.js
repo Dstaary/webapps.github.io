@@ -13,7 +13,7 @@ const addTask = (e) => {
     if(titleTask === "") return; 
     const newTask = document.createElement('div');
     newTask.className = 'task';
-    newTask.innerHTML = `<span class="task_name"> ${titleTask}</span>  <button type="submit" class="deleteTask_btn"><i class="fas fa-times"></i></button>`;
+    newTask.innerHTML = `<span class="task_name"> ${titleTask}</span>  <button type="submit" class="deleteTask_btn">X</button>`;
 
     toDoList.push(newTask)
     renderList()
