@@ -21,7 +21,6 @@
             <div class="bar3"></div>
         </div>
         <nav class="menu_burger" id="menu">
-            
             <div class="apps_icons" id="apps" >
                 <a href="#"  class="nav_button" id="price">Koszt paliwa</a>
                 <a href="#"  class="nav_button" id="todo">To Do App</a>
@@ -31,13 +30,13 @@
             </div>
             
         </nav>
-        <div class="app fuel_section" id="price">
+        <div class="app fuel_section hidden_section" id="price">
             <div class="fuel_info">
              <span class="score">
              </span>
             </div>
             <div class="fuel_container">
-             <h1 class="fuel_tittle">Obliczanie kosztów przejazdu</h1>
+             <h1 class="app_tittle">Obliczanie kosztów przejazdu</h1>
               <form class="fuel_form">
                     <div class="form-floating mb-3">
                      <input type="number" class="form-control dystans check_value" id="floatingInput"  required placeholder="Dystans" size="20" maxlength="10"  name="dystans">
@@ -67,7 +66,7 @@
 
         <div class="app toDoApp_section hidden_section" id="todo">
             <div class="toDo_container">
-                <h1 class="fuel_tittle">To Do List</h1>
+                <h1 class="app_tittle">To Do List</h1>
                     <form class="form-floating mb-5 task_input">
                         <input type="text" class="form-control toDoAddTask" id="floatingInput" placeholder="Add a task..." size="20" maxlength="50"  name="task">
                         <label for="floatingInput">Add a task...</label>
@@ -88,7 +87,7 @@
                 </span>
             </div>
             <div class="draw_container">
-                <h1 class="fuel_tittle">Losowanie</h1>
+                <h1 class="app_tittle">Losowanie</h1>
                 <form class="draw_form">
                     <div class="form-floating mb-3">
                     <input type="number" class="form-control startnumber drawcheck" id="floatingInput"   placeholder="Od" size="4" maxlength="4"  name="startnumber">
@@ -106,11 +105,25 @@
             </div>
         </div>
 
-        <!-- <div class="app notes_section hidden_section" id="notes">
-            
+        <div class="app notes_section " id="notes">
+            <div class="addnotes_block">
+                <div class="notes_container">
+                    <h1 class="app_tittle" >Dodaj notatkę</h1>
+                    <form class="form-floating mb-5 note_input">
+                        <input type="text" class="form-control addNotes" id="floatingInput" placeholder="Add a note..." size="20" maxlength="100"  name="task">
+                        <label for="floatingInput">Add a note...</label>
+                        <button class="addNote_btn">Add</button>
+                    </form> 
+                </div>
+                    <hr class="linehr">
+                <div class="notes_blocks"></div>
+
+                </div>
+                        
+            </div>
         </div>
 
-        <div class="app calculator_section hidden_section" id="calculator">
+        <!-- <div class="app calculator_section hidden_section" id="calculator">
             
         </div> -->
 
@@ -121,6 +134,7 @@
           e.classList.toggle("change");
         }
     </script>
+    <script src="js/notes.js"></script>
     <script src="js/drawnumber.js"></script>
     <script src="js/todo.js"></script>
     <script src="js/menu_links.js"></script>

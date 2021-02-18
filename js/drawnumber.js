@@ -14,7 +14,7 @@ const drawclick = (e) => {
             scoreNumber.innerHTML = "<p>Pierwsza liczba jest wieksza niż druga !</p>";
             return;
         } else {
-            let drawNumber = (x, y) => Math.floor(Math.random() * (x - y + 1) + y);
+            let drawNumber = (x, y) => Math.floor(Math.random() * (x - y) +1 + y);
             scoreNumber.innerHTML = `<p>Wylosowana liczba to: ${drawNumber(parseInt(firstNumber.value), parseInt(lastNumber.value))}</p>`
         }
     }
