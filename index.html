@@ -1,139 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <META CHARset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>DEVSTR SIMPLE APPS</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" rel="stylesheet">
 
-    <title>Document</title>
+<head>
+  <META CHARset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>DEVSTR SIMPLE APPS</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" rel="stylesheet">
+
+  <title>Document</title>
 </head>
+
 <body>
-    <section class="main_section">
-        <div id="burgerBtn" class="burger"  onclick="burger(this)">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
+  <section class="main_section">
+    <div id="burgerBtn" class="burger" onclick="burger(this)">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+    <nav class="menu_burger" id="menu">
+      <div class="apps_icons" id="apps">
+        <a href="#" class="nav_button" id="price">Koszty przejazdu</a>
+        <a href="#" class="nav_button" id="todo">To Do App</a>
+        <a href="#" class="nav_button" id="draw">Losowanie</a>
+        <a href="#" class="nav_button" id="notes">Notatki</a>
+      </div>
+
+    </nav>
+    <div class="app fuel_section" id="price">
+      <div class="fuel_info">
+        
+      </div>
+      <div class="fuel_container">
+        <h1 class="app_tittle">Obliczanie kosztów przejazdu</h1>
+        <form class="fuel_form">
+          <div style="margin: 0 20px;">
+            <div class="form-floating mb-3">
+              <input type="number" class="form-control dystans check_value" id="floatingInput" required
+                placeholder="Dystans" size="20" maxlength="10" name="dystans">
+              <label for="floatingInput">Dystans</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="number" class="form-control spalanie check_value" id="floatingInput" placeholder="Spalanie"
+                required size="20" maxlength="4" name="spalanie">
+              <label for="floatingInput">Spalanie</label>
+            </div>
+          </div>
+          <div style="margin: 0 20px;">
+            <div class="form-floating mb-3">
+              <input type="number" class="form-control CenaPaliwa check_value" id="floatingInput"
+                placeholder="Cena paliwo" required size="20" maxlength="5" name="cena_paliwSa">
+              <label for="floatingInput">Cena paliwa</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="number" class="form-control IloscOsob check_value" id="floatingInput"
+                placeholder="Ilość osób podróżujących" required size="20" maxlength="2" name="ilosc_osob">
+              <label for="floatingInput">Ilość osób</label>
+            </div>
+          </div>
+        </form>
+        <div class="fuel_options">
+          <h1 class="fuel_options_tittle">Dodatkowe koszty</h1>
+          <form class="form_fuel_options">
+            <div class="form-floating">
+              <input type="string" class="form-control optionName" id="floatingInput" required
+                placeholder="Nazwa/Opis..." size="20" maxlength="40" name="">
+              <label for="floatingInput">Nazwa/Opis...</label>
+            </div>
+            <div class="form-floating">
+              <input type="number" class="form-control optionCost" id="floatingInput" required
+                placeholder="Kwota" size="10" maxlength="10" name="">
+              <label for="floatingInput">Kwota</label>
+            </div>
+            <button class="btn_fuel">Dodaj</button>
+          </form>
+          <div class="options_list">
+            <!-- <div class="option">
+            <p>Bramka nr 1 w Przeźmierowie</p><span class="kwota">25zł</span>
+            </div> -->
+          </div>
         </div>
-        <nav class="menu_burger" id="menu">
-            <div class="apps_icons" id="apps" >
-                <a href="#"  class="nav_button" id="price">Koszt paliwa</a>
-                <a href="#"  class="nav_button" id="todo">To Do App</a>
-                <a href="#"  class="nav_button" id="draw">Losowanie</a>
-                <a href="#"  class="nav_button" id="notes">Notatki</a>
-            </div>
-            
-        </nav>
-        <div class="app fuel_section" id="price">
-            <div class="fuel_info">
-             <span class="score">
-             </span>
-            </div>
-            <div class="fuel_container">
-             <h1 class="app_tittle">Obliczanie kosztów przejazdu</h1>
-              <form class="fuel_form">
-                    <div class="form-floating mb-3">
-                     <input type="number" class="form-control dystans check_value" id="floatingInput"  required placeholder="Dystans" size="20" maxlength="10"  name="dystans">
-                     <label for="floatingInput">Dystans</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                     <input type="number" class="form-control spalanie check_value" id="floatingInput" placeholder="Spalanie" required
-                     size="20" maxlength="4" name="spalanie">
-                     <label for="floatingInput">Spalanie</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                     <input type="number" class="form-control CenaPaliwa check_value" id="floatingInput" placeholder="Cena paliwo" required
-                     size="20" maxlength="5" name="cena_paliwka">
-                     <label for="floatingInput">Cena paliwka</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                     <input type="number" class="form-control IloscOsob check_value" id="floatingInput" placeholder="Ilość osób podróżujących" required
-                     size="20" maxlength="2" name="ilosc_osob">
-                     <label for="floatingInput">Ilość osób</label>
-                    </div>
-                    <span class="error"></span>
-                
-                    </form>
-            </div>
-        </div>
+        <span class="error"></span>
+        <span class="score">
+        </span>
+      </div>
+    </div>
+    </div>
     </div>
 
-        <div class="app toDoApp_section hidden_section" id="todo">
-         <div class="toDo_block">
-            <div class="toDo_container">
-                <h1 class="app_tittle">To Do List</h1>
-                    <form class="form-floating mb-5 task_input">
-                        <input type="text" class="form-control toDoAddTask" id="floatingInput" placeholder="Add a task..." size="20" maxlength="50"  name="task">
-                        <label for="floatingInput">Add a task...</label>
-                        <button class="addTask_btn">Add</button>
-                    </form> 
-            </div>   
-            <div class="tasks">
-                        
-            </div> 
-         </div> 
+    <div class="app toDoApp_section hidden_section" id="todo">
+      <div class="toDo_block">
+        <div class="toDo_container">
+          <h1 class="app_tittle">To Do List</h1>
+          <form class="form-floating mb-5 task_input">
+            <input type="text" class="form-control toDoAddTask" id="floatingInput" placeholder="Add a task..." size="20"
+              maxlength="50" name="task">
+            <label for="floatingInput">Add a task...</label>
+            <button class="addTask_btn">Add</button>
+          </form>
         </div>
+        <div class="tasks">
 
-        <div class="app draw_section hidden_section" id="draw">
-            <div class="draw_number">
-                <span class="number">
-                    <!-- <p>Wylosowana liczba to: <b class="green">213</b></p> -->
-                </span>
-            </div>
-            <div class="draw_container">
-                <h1 class="app_tittle">Losowanie</h1>
-                <form class="draw_form">
-                    <div class="form-floating mb-3">
-                    <input type="number" class="form-control startnumber drawcheck" id="floatingInput"   placeholder="Od" size="4" maxlength="4"  name="startnumber">
-                    <label for="floatingInput">Od</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                    <input type="number" class="form-control lastnumber drawcheck" id="floatingInput" placeholder="Do" 
-                    size="4" maxlength="4" name="lastnumber">
-                    <label for="floatingInput">Do</label>
-                    </div>
-                    
-                    <button class="drawNumber_btn" >Losuj</button>
-                    
-                </form>
-            </div>
         </div>
+      </div>
+    </div>
 
-        <div class="app notes_section hidden_section" id="notes">
-            <div class="addnotes_block">
-                <div class="notes_container">
-                    <h1 class="app_tittle" >Dodaj notatkę</h1>
-                    <form class="form-floating mb-5 note_input">
-                        <input type="text" class="form-control addNotes" id="floatingInput" placeholder="Add a note..." size="20" maxlength="100"  name="task">
-                        <label for="floatingInput">Add a note...</label>
-                        <button class="addNote_btn">Add</button>
-                    </form> 
-                </div>
-                    <!-- <hr class="linehr"> -->
-                <div class="notes_blocks"></div>
+    <div class="app draw_section hidden_section" id="draw">
+      <div class="draw_number">
+        <span class="number">
+          <!-- <p>Wylosowana liczba to: <b class="green">213</b></p> -->
+        </span>
+      </div>
+      <div class="draw_container">
+        <h1 class="app_tittle">Losowanie</h1>
+        <form class="draw_form">
+          <div class="form-floating mb-3">
+            <input type="number" class="form-control startnumber drawcheck" id="floatingInput" placeholder="Od" size="4"
+              maxlength="4" name="startnumber">
+            <label for="floatingInput">Od</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="number" class="form-control lastnumber drawcheck" id="floatingInput" placeholder="Do" size="4"
+              maxlength="4" name="lastnumber">
+            <label for="floatingInput">Do</label>
+          </div>
 
-                </div>
-                        
-            </div>
+          <button class="drawNumber_btn">Losuj</button>
+
+        </form>
+      </div>
+    </div>
+
+    <div class="app notes_section hidden_section" id="notes">
+      <div class="addnotes_block">
+        <div class="notes_container">
+          <h1 class="app_tittle">Dodaj notatkę</h1>
+          <form class="form-floating mb-5 note_input">
+            <input type="text" class="form-control addNotes" id="floatingInput" placeholder="Add a note..." size="20"
+              maxlength="100" name="task">
+            <label for="floatingInput">Add a note...</label>
+            <button class="addNote_btn">Add</button>
+          </form>
         </div>
+        <!-- <hr class="linehr"> -->
+        <div class="notes_blocks"></div>
 
-    </section>
+      </div>
 
-    <script>
-        function burger(e) {
-          e.classList.toggle("change");
-        }
-    </script>
-    <script src="js/notes.js"></script>
-    <script src="js/drawnumber.js"></script>
-    <script src="js/todo.js"></script>
-    <script src="js/menu_links.js"></script>
-    <script src="js/toggle_menu.js"></script>
-    <script src="js/fuel_score.js"></script>
+    </div>
+    </div>
+
+  </section>
+
+  <script>
+    function burger(e) {
+      e.classList.toggle("change");
+    }
+  </script>
+  <script src="js/notes.js"></script>
+  <script src="js/drawnumber.js"></script>
+  <script src="js/todo.js"></script>
+  <script src="js/menu_links.js"></script>
+  <script src="js/toggle_menu.js"></script>
+  <script src="js/fuel_score.js"></script>
 </body>
+
 </html>

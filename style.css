@@ -157,28 +157,28 @@ body {
 /* fuel section */
 
 .fuel_container {
-    width: 450px;
-    height: 450px;
+    width: auto;
+    height: auto;
     border-radius: 10%/10%;
     background-color: #505050;
     position: absolute;
     top: 50%;
     left: 50%;
     margin-right: -50%;
-    transform: translate(-30%, -60%)
+    transform: translate(-30%, -40%)
 }
 
-.fuel_info {
-    width: 450px;
-    height: auto;
-    border-radius: 10%/10%;
-    background-color: #707070;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-30%, 40%)
+.fuel_options_tittle {
+    margin: 15px;
+    font-size: 18px;
+    text-align: center;
+    color: white;
 }
+.fuel_options {
+    display: flex;
+    flex-direction: column;
+}
+
 
 .app_tittle {
     color: white;
@@ -192,8 +192,8 @@ body {
 
 .fuel_form {
     display: flex;
-    flex-direction: column;
-    margin: 15px 80px;
+    flex-direction: row;
+    margin: 0 40px;
 }
 
 .fuel_form>div {
@@ -214,20 +214,43 @@ body {
     color: grey;
 }
 
+.form_fuel_options {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 60px;
+}
+
+.form_option {
+    width: 150px;
+    height: 60px;
+}
+
+.option_list {
+    display: inline-flex;
+    flex-direction: row;
+}
+
+.option {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+    margin: 0 60px;
+}
+
 .btn {
-    width: 100%;
+    width: auto;
+    height: auto;
     text-align: center;
 }
 
 .btn_fuel {
     opacity: 0.6;
-    padding: 15px 60px;
     border-radius: 15px/15px;
     background: #707070;
     border: none;
     color: white;
-    margin: 0;
-}
+} 
 
 .btn_fuel:hover {
     background-color: #232323;
@@ -240,7 +263,7 @@ body {
 }
 
 .score>p {
-    margin: 115px 30px 20px 30px;
+    margin: 30px  20px;
     font-size: 14px;
     text-align: center;
     color: white;
@@ -254,17 +277,12 @@ body {
 }
 
 
+
 @media only screen and (max-width: 700px) {
     .fuel_container {
         width: 90%;
         height: auto;
-        transform: translate(-50%, -60%)
-    }
-
-    .fuel_info {
-        width: 90%;
-        margin-right: -50%;
-        transform: translate(-50%, 5%)
+        transform: translate(-50%, -10%)
     }
 
     .fuel_tittle {
@@ -276,6 +294,14 @@ body {
         display: flex;
         flex-direction: column;
         margin: 20px;
+    }
+    .optionName, .optionCost  {
+        margin-bottom: 15px;
+    }
+     
+    .form_fuel_options {
+        display: flex;
+        flex-direction: column;
     }
 
     .score>p {
