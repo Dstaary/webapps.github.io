@@ -3,13 +3,14 @@ const spalanie = document.querySelector('input.spalanie');
 const cenaPaliwa = document.querySelector('input.CenaPaliwa');
 const iloscOsob = document.querySelector('input.IloscOsob');
 const formLabels = document.querySelectorAll(".check_value");
+const sumBtn = document.querySelector(".sumButton");
 
 const form = document.querySelector(".fuel_form");
 const newSpan = document.querySelector(".score");
 const errorSpan = document.querySelector("span.error")
 
 
-    form.addEventListener('input', () => {
+sumBtn.addEventListener('click', () => {
 
         for (const formLabel of formLabels) {
             if (!formLabel.value){
@@ -22,15 +23,21 @@ const errorSpan = document.querySelector("span.error")
             }
             newSpan.innerHTML = "";
         }
+        let allOptionsCost = 0;
+        for(let i = 0; i<optionCostList.length; i++) {
+            allOptionsCost = allOptionsCost + optionCostList[i]*1;
+        }
         
         const fuelL = (dystans.value * spalanie.value) / 100;
         
         const fuelScore = fuelL * cenaPaliwa.value;
+
+        const costScore = fuelScore + allOptionsCost;
         
-        const zrzutka = fuelScore / iloscOsob.value;
+        const zrzutka = (fuelScore + allOptionsCost) / iloscOsob.value;
         
         errorSpan.innerHTML = "";
-        newSpan.innerHTML = `<p class="score">Przy średnim spalaniu: <b>${spalanie.value}</b>/100 km,<br> koszt podróży dla <b>${iloscOsob.value}</b></span> osób<br> wyniesie: <b>${fuelScore.toFixed(2)}</b> zł.<br> Zrzucacie się po: <b>${zrzutka.toFixed(2)}</b> zł</p>`
+        newSpan.innerHTML = `<p class="score">Przy średnim spalaniu: <b>${spalanie.value}</b>/100 km, koszt podróży dla <b>${iloscOsob.value}</b></span> osób<br> wyniesie: <b>${fuelScore.toFixed(2)}</b> zł. Po doliczeniu dodatkowych <b>${allOptionsCost}</b>zł kosztów. </br> Zrzucacie się po: <b>${zrzutka.toFixed(2)}</b> zł</p>`
         
 })
 
