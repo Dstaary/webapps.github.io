@@ -3,7 +3,8 @@ const spalanie = document.querySelector('input.spalanie');
 const cenaPaliwa = document.querySelector('input.CenaPaliwa');
 const iloscOsob = document.querySelector('input.IloscOsob');
 const formLabels = document.querySelectorAll(".check_value");
-const sumBtn = document.querySelector(".sumButton");
+const sumBtn = document.querySelector(".sumBtn");
+const clearAll = document.querySelector(".clearBtn")
 
 const form = document.querySelector(".fuel_form");
 const newSpan = document.querySelector(".score");
@@ -40,6 +41,8 @@ sumBtn.addEventListener('click', () => {
         newSpan.innerHTML = `<p class="score">Przy średnim spalaniu: <b>${spalanie.value}</b>/100 km, koszt podróży dla <b>${iloscOsob.value}</b></span> osób<br> wyniesie: <b>${fuelScore.toFixed(2)}</b> zł. Po doliczeniu dodatkowych <b>${allOptionsCost}</b>zł kosztów. </br> Zrzucacie się po: <b>${zrzutka.toFixed(2)}</b> zł</p>`
         
 })
+
+
 
 
 

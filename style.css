@@ -252,12 +252,12 @@ body {
     color: white;
 } 
 
-.btn_fuel .sumButton:hover {
+.btn_fuel:hover {
     background-color: #232323;
     color: white;
 }
 
-.btn_fuel .sumButton:focus {
+.btn_fuel:focus {
     border: none;
     outline: none;
 }
@@ -271,8 +271,7 @@ body {
     padding: 0 12px;
 }
 
-.sumButton {
-    margin: 10px 40%;
+.sumClearBtn {
     width: 100px;
     height: 40px;
     text-align: center;
@@ -283,7 +282,21 @@ body {
     color: white;
 }
 
+.sumClearBtn:hover {
+    background-color: #232323;
+    color: white;
+}
 
+.sumClearBtn:focus {
+    border: none;
+    outline: none;
+}
+
+.fuelBtn {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 30%;
+}
 
 .score>p {
     margin: 30px  20px;
