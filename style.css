@@ -262,6 +262,15 @@ body {
     outline: none;
 }
 
+.deleteOption_btn {
+    height: 30px;
+    width: auto;
+    background-color: gray;
+    border-radius: 100px/100px;
+    margin: 0;
+    padding: 0 12px;
+}
+
 .score>p {
     margin: 30px  20px;
     font-size: 14px;
@@ -295,7 +304,7 @@ body {
         flex-direction: column;
         margin: 20px;
     }
-    .optionName, .optionCost  {
+    .optionInput  {
         margin-bottom: 15px;
     }
      
