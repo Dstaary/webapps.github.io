@@ -13,7 +13,7 @@ const addTask = (e) => {
     if(titleTask === "") return; 
     const newTask = document.createElement('div');
     newTask.className = 'task';
-    newTask.innerHTML = `<span class="task_name"> ${titleTask}</span>  <button type="submit" class="deleteTask_btn">X</button>`;
+    newTask.innerHTML = `<button type="submit" class="checkTask_btn">✔</button><span class="task_name"> ${titleTask}</span>  <button type="submit" class="deleteTask_btn">X</button>`;
 
     toDoList.push(newTask)
     renderList()
@@ -24,8 +24,11 @@ const addTask = (e) => {
     newTask.querySelector('.deleteTask_btn').addEventListener
     ('click', removeAddTask)
 
-    // newTask.querySelector('.checkTask_btn').addEventListener
-    // ('click', checkAddTask)
+    newTask.querySelector('.checkTask_btn').addEventListener
+    ('click', (e) => {
+        e.target.classList.toggle('checkTask');
+        newTask.classList.toggle('checkTask');
+    })
 }
 
 formTasks.addEventListener('submit', addTask)
