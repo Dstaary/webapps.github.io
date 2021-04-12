@@ -92,7 +92,7 @@
     </div>
     </div>
 
-    <div class="app toDoApp_section" id="todo">
+    <div class="app toDoApp_section hidden_section" id="todo">
       <div class="toDo_block">
         <div class="toDo_container">
           <h1 class="app_tittle">To Do List</h1>
@@ -137,22 +137,25 @@
       </div>
     </div>
 
-    <div class="app notes_section hidden_section" id="notes">
+    <div class="app notes_section" id="notes">
       <div class="addnotes_block">
         <div class="notes_container">
           <h1 class="app_tittle">Dodaj notatkę</h1>
           <form class="form-floating mb-5 note_input">
-            <input type="text" class="form-control addNotes" id="floatingInput" placeholder="Add a note..." size="20"
-              maxlength="100" name="task">
+            <textarea class="form-control addNotes" id="exampleFormControlTextarea1"></textarea>
             <label for="floatingInput">Add a note...</label>
             <button class="addNote_btn">Add</button>
           </form>
         </div>
-        <!-- <hr class="linehr"> -->
-        <div class="notes_blocks"></div>
-
+      <div class="notes_blocks">
+        <div class="noteblock">
+          <!-- <div class="note_btns">
+            <button type="submit" class="deleteNote_btn">X</button><button type="submit" class="checkNote_btn">✔</button>
+          </div>  
+          <p>Przykład dodanej notatki</p> -->
+        </div>
       </div>
-
+    </div>
     </div>
     </div>
 
